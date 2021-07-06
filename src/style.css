@@ -14,10 +14,9 @@ li {
 }
 
 #search-location {
-  float: right;
-  display: block;
-  right: 20px;
-  margin-top: 20px;
+  position: absolute;
+  right: 50px;
+  top: 20px;
 }
 
 #use-current-location {
@@ -37,6 +36,7 @@ li {
 
 .card {
   margin: 0 auto;
+  margin-top: 150px;
   background: radial-gradient(
     circle at 10% 20%,
     rgba(234, 249, 249, 0.67) 0.1%,
