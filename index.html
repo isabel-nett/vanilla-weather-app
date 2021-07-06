@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="src/style.css"/>
   <title>Weather App</title>
 </head>
@@ -15,92 +14,57 @@
   <div class="search-area">
     <form id="search-location" class="mb-3">
       <div class="row">
-      <div class="col-5">
+      <div class="col-8">
         <input type="search" placeholder="Enter your city" class="form-control" id="city-input" autocomplete="off" />
       </div>
       <div class="col-3">
         <input type="submit" value="Search" class="btn btn-primary" id="search-button" />
       </div>
-    </div>
+      </div>
     <a href="" id=use-current-location>
-      Use my current location 📍
+      Use your current location 📍
     </a>
   </form>
   </div>
   <div class="card col-lg-6">
     <div class="weather-card">
-      <h1 id="city-output"></h1>
+        <h1 id="city-output"></h1>
       <div class="row">
         <div class="col-6">
           <ul>
             <li>
-              <span id="today-date"></span>
+              <div id="last-updated">
+              Last updated: <span id="today-date"></span>
+              </div>
             </li>
             <li>
-            <span id="temperature"></span>
-            <span id="units">
-              <a href="" id="Celcius">°C</a>
-              /
-              <a href="" id="Farenheit">°F</a>
-            </span>
+              <span id="temperature"></span>
+              <span id="units">
+                <a href="" id="celcius" class="active">°C</a>
+                |
+                <a href="" id="farenheit">°F</a>
+              </span>
             </li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <ul>
-            <li class="weather-description">
-              <span id="weather-icon">🌤</span>
-              <strong id="weather-description"></strong>
-            </li>
-            <li>Humidity: <span id="humidity"></span></li>
+            <li>Humidity: <span id="humidity"></span>%</li>
             <li>Wind: <span id="wind"></span> km/h</li>
           </ul>
         </div>
+        <div class="col-6">
+          <ul class="weather-description">
+            <li>
+              <img src="" alt="" id="weather-icon" />
+              <strong id="weather-description" class="text-nowrap"></strong>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <div class="next-five-days">
-    <div class="row justify-content-center">
-      <div class="col-2 future-day">
-        <span class="day-of-week">Tomorrow</span>
-        <br />
-        <span class="weather-icon">🌤</span>
-        <br />
-        <span class="future-temp">75°/53°</span>
-      </div>
-      <div class="col-2 future-day">
-        <span class="day-of-week">Friday</span>
-        <br />
-        <span class="weather-icon">🌤</span>
-        <br />
-        <span class="future-temp">75°/53°</span>
-      </div>
-      <div class="col-2 future-day">
-        <span class="day-of-week">Saturday</span>
-        <br />
-        <span class="weather-icon">🌤</span>
-        <br />
-        <span class="future-temp">75°/53°</span>
-      </div>
-      <div class="col-2 future-day">
-        <span class="day-of-week">Sunday</span>
-        <br />
-        <span class="weather-icon">🌤</span>
-        <br />
-        <span class="future-temp">75°/53°</span>
-      </div>
-      <div class="col-2 future-day">
-        <span class="day-of-week">Monday</span>
-        <br />
-        <span class="weather-icon">🌤</span>
-        <br />
-        <span class="future-temp">75°/53°</span>
-      </div>
-    </div>
-  </div>
-  <a href="" target="_blank" id="footer"><small>Open-source code</small></a>
+  <div id="footer">
+  <a href="" target="_blank"><small>Open-source code</small></a>
   <small>by Isabel Barnett</small>
   </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="src/app.js"></script>
 </body>
 </html>

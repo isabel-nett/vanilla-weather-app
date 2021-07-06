@@ -13,18 +13,21 @@ li {
   font-size: 40px;
 }
 
-.body {
-  font-family: "Poppins", sans-serif;
-}
-
-.form-control {
-  font-family: "Poppins", sans-serif;
+#search-location {
+  float: right;
+  display: block;
+  right: 20px;
+  margin-top: 20px;
 }
 
 #use-current-location {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: black;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  float: right;
 }
 
 #use-current-location:hover {
@@ -33,9 +36,7 @@ li {
 }
 
 .card {
-  font-family: "Poppins", sans-serif;
   margin: 0 auto;
-  margin-top: 100px;
   background: radial-gradient(
     circle at 10% 20%,
     rgba(234, 249, 249, 0.67) 0.1%,
@@ -59,67 +60,43 @@ li {
   vertical-align: 40px;
 }
 
-#Celcius,
-#Farenheit {
+#celcius,
+#farenheit {
   text-decoration: none;
   color: #198754;
 }
-#Celcius:hover,
-#Farenheit:hover {
+#celcius:hover,
+#farenheit:hover {
   color: black;
   transition: all 200ms ease-in-out;
   text-decoration: underline;
 }
 
-#today-date {
+a.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+a.active:hover {
+  text-decoration: none;
+}
+
+#today-date,
+#last-updated {
   font-size: 12px;
-}
-
-.weather-details {
-  text-align: left;
-}
-
-#weather-icon,
-#weather-description {
-  font-size: 30px;
 }
 
 #weather-description {
   font-family: "Pattaya", sans-serif;
   text-transform: capitalize;
-}
-
-.current-precipitation {
-  margin-top: 20px;
-}
-
-.quote {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-.next-five-days {
-  margin-top: 70px;
-}
-
-.future-day {
-  text-align: center;
-}
-
-.day-of-week {
-  font-family: "Pattaya", sans-serif;
-}
-
-.future-temp {
-  font-weight: lighter;
+  font-size: 16px;
 }
 
 #footer {
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
   line-height: 200px;
-  text-align: center;
   color: rgb(102, 102, 102);
+  float: right;
 }
