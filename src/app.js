@@ -90,3 +90,23 @@ document.querySelector('#celcius').addEventListener("click", displayCTemp);
 document.querySelector('#search-button').addEventListener("click", searchCity);
 document.querySelector('#use-current-location').addEventListener("click", navigator.geolocation.getCurrentPosition(searchCurrent));
 formatDate();
+
+
+
+let quoteText = document.getElementById("quote-text");
+let quoteAuthor = document.getElementById("quote-author");
+
+function getDailyQuote() {
+ let apiQuote = "https://quotes.rest/qod?category=inspire";
+ axios.get(apiQuote).then(showDailyQuote);
+}
+
+function showDailyQuote(response) {
+  console.log(response.contents.quotes.quote)
+  let quoteContent = (response.contents.quotes.quote);
+  let quoteBy = (response.contents.quotes.author);
+  quoteText.innerHTML = `${quoteContent}`;
+  quoteAuthor.innerHTML = `-${quoteBy}`;
+}
+
+getDailyQuote();
