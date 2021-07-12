@@ -72,13 +72,12 @@ li {
   text-decoration: underline;
 }
 
-a.active {
-  color: black;
+#units .active {
+  color: rgb(33, 33, 33);
   cursor: default;
-  text-decoration: none;
 }
 
-a.active:hover {
+#units .active:hover {
   text-decoration: none;
 }
 
@@ -91,6 +90,16 @@ a.active:hover {
   font-family: "Pattaya", sans-serif;
   text-transform: capitalize;
   font-size: 16px;
+}
+
+.five-day-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.quote {
+  text-align: center;
 }
 
 #footer {
