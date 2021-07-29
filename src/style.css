@@ -93,12 +93,14 @@ li {
 }
 
 .five-day-forecast {
+  font-family: "Poppins", sans-serif;
   margin-top: 20px;
   text-align: center;
   color: #000;
 }
 
 .quote {
+  font-family: "Poppins", sans-serif;
   text-align: center;
   max-width: 500px;
   margin: 0 auto;
