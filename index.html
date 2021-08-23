@@ -10,22 +10,21 @@
   <title>Weather App</title>
 </head>
 <body>
-  <div class="container">
-  <div class="search-area">
-    <form id="search-location" class="mb-3">
-      <div class="row">
-      <div class="col-8">
-        <input type="search" placeholder="Enter your city" class="form-control" id="city-input" autocomplete="off" />
-      </div>
-      <div class="col-3">
-        <input type="submit" value="Search" class="btn btn-primary" id="search-button" />
-      </div>
-      </div>
-    <a href="" id=use-current-location>
-      Use your current location 📍
-    </a>
+  <div class="container-fluid">
+    <form id="search-location">
+      <ul class="search-section">
+        <li>
+          <input type="search" placeholder="Enter your city" class="form-control city-input" id="city-input" autocomplete="off" />
+        </li>
+        <li>
+          <input type="submit" value="Search" class="btn btn-dark" id="search-button" />
+        </li>
+        <li>
+          <a href="" id=use-current-location>Use your</br>current location 📍</a>
+        </li>
+      </ul>
   </form>
-  </div>
+  <div class="row">
   <div class="card col-lg-6">
     <div class="weather-card">
         <h1 id="city-output"></h1>
@@ -60,6 +59,7 @@
       </div>
     </div>
   </div>
+  </div>
   <p class="quote">
     <strong>Your quote for today:</strong>
     <br />
@@ -70,10 +70,11 @@
   <div class="five-day-forecast" id="five-day-forecast">
   </div>
   <div id="footer">
-  <a href="" target="_blank"><small>Open-source code</small></a>
-  <small>by Isabel Barnett</small>
+    <a href="" target="_blank"><small>Open-source code</small></a>
+    <small>by Isabel Barnett</small>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="src/app.js"></script>
+</div>
 </body>
 </html>
